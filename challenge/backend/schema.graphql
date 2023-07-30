@@ -1,0 +1,80 @@
+scalar DateTime
+scalar UUID
+
+input UserInput {
+    name: String
+    age: Int
+    language: String
+    country: String
+}
+
+type User {
+    id: UUID!
+    name: String!
+    role: String!
+    money: Int!
+    age: Int!
+    language: String!
+    country: String!
+}
+
+type Transaction {
+    id: UUID!
+    sender: User!
+    recipient: User!
+    amount: Int!
+    description: String!
+    timestamp: DateTime!
+}
+
+type Upgrade {
+    success: Boolean!
+    errors: [String]
+    flag: String
+}
+
+type UsersResult {
+    success: Boolean!
+    errors: [String]
+    users: [User]
+}
+
+type UserResult {
+    success: Boolean!
+    errors: [String]
+    user: User
+}
+
+type UserSignupResult {
+    success: Boolean!
+    errors: [String]
+    apikey: String
+}
+
+type UserSigninResult {
+    success: Boolean!
+    errors: [String]
+    apikey: String
+}
+
+type TransactionsResult {
+    success: Boolean!
+    errors: [String]
+    transactions: [Transaction]
+}
+
+type Query {
+    hello: String!
+    users: UsersResult!
+    user(userId: UUID!): UserResult!
+    me: UserResult!
+    transactions: TransactionsResult!
+}
+
+type Mutation {
+    signup(name: String!, password: String!): UserSignupResult!
+    signin(name: String!, password: String!): UserSigninResult!
+    user(userId: UUID, name: String, input: UserInput!): UserResult!
+    createTransaction(recipientId: UUID!, amount: Int!, description: String!): TransactionsResult!
+    upgrade: Upgrade!
+}

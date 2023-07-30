@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: mysecretpassword
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: example
+    ports:
+      - 5432:5432
+
+  
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5002:5002"
+    environment:
+      - DB_USER=mysecretpassword
+      - DB_PASS=example
+      - DB_NAME=example
+
+  frontend:
+    build:
+      context: ./banking-frontend
+    ports:
+      - "3000:3000"
+
+  bot:
+    build:
+      context: ./challenge-bot
+    environment:
+      - DB_USER=mysecretpassword
+      - DB_PASS=example
+      - DB_NAME=example
