@@ -20,12 +20,15 @@ services:
       - DB_USER=mysecretpassword
       - DB_PASS=example
       - DB_NAME=example
+      - DB_HOST=db
 
   frontend:
     build:
       context: ./banking-frontend
     ports:
       - "3000:3000"
+    environment:
+      - API_HOST=backend
 
   bot:
     build:
@@ -34,3 +37,4 @@ services:
       - DB_USER=mysecretpassword
       - DB_PASS=example
       - DB_NAME=example
+      - DB_HOST=db

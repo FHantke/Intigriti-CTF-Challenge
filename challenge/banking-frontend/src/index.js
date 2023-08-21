@@ -46,8 +46,13 @@ function PrivateRoute({ children }) {
   return children
 }
 
+console.log('http://'  + process.env.API_HOST + ':5002/graphql')
+
+// TODO check for host first
 const httpLink = createHttpLink({  
-  uri: 'http://127.0.0.1:5002/graphql'
+  // uri: 'http://127.0.0.1:5002/graphql'
+  // uri: 'http://backend:5002/graphql'
+  uri: 'http://backend:5002/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
