@@ -25,10 +25,10 @@ services:
   frontend:
     build:
       context: ./banking-frontend
+      args:
+        - REACT_APP_API_HOST=backend
     ports:
       - "3000:3000"
-    environment:
-      - API_HOST=backend
 
   bot:
     build:

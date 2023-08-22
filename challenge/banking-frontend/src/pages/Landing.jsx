@@ -5,7 +5,7 @@ function Landing() {
     return (
         <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
             <section className="text-center p-10 text-gray-700">
-                <h2 className="text-3xl font-bold mb-5">Welcome to Bug Bank - Redefining the Value of Currency!, Today!</h2>
+                <h2 className="text-3xl font-bold mb-5">Welcome to Bug Bank - Redefining the Value of Currency, Today!</h2>
                 <p className="text-xl mb-8">We're pioneers, introducing an innovative, eco-friendly system that uses bugs as a form of trade instead of money.</p>
 
                 <p className="text-lg">
@@ -20,7 +20,7 @@ function Landing() {
             <section className="grid grid-cols-2 gap-4 p-10">
                 <div className="card bordered">
                     <figure>
-                        <img src="https://picsum.photos/400" />
+                        <img src="/images/bug1_small.png" />
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">Bug-Based Economy</h2>
@@ -30,7 +30,7 @@ function Landing() {
 
                 <div className="card bordered">
                     <figure>
-                        <img src="https://picsum.photos/400" />
+                        <img src="/images/bug2_small.png" />
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">Eco-Conscious Banking</h2>
@@ -40,7 +40,7 @@ function Landing() {
 
                 <div className="card bordered">
                     <figure>
-                        <img src="https://picsum.photos/400" />
+                        <img src="/images/bug3_small.png" />
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">Innovative Services</h2>
@@ -50,7 +50,7 @@ function Landing() {
 
                 <div className="card bordered">
                     <figure>
-                        <img src="https://picsum.photos/400" />
+                        <img src="/images/bug4_small.png" />
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title">Secure Bug Vaults</h2>
