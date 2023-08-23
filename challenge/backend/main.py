@@ -12,7 +12,8 @@ main = Blueprint('main', __name__)
 
 query = ObjectType("Query")
 
-query.set_field("users", resolve_users)
+# We don't need the users query anymore
+# query.set_field("users", resolve_users)
 query.set_field("user", resolve_user)
 query.set_field("me", resolve_me)
 query.set_field("transactions", resolve_transactions)

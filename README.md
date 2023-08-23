@@ -13,7 +13,7 @@ Before you begin, ensure you have [Docker](https://docs.docker.com/engine/instal
 
    For example, you may want to update the database configurations `POSTGRES_USER`, `POSTGRES_PASSWORD`, and `POSTGRES_DB`. Accordingly, you need to update `DB_USER`, `DB_PASS`, and `DB_NAME` for the backend and bot services.
 
-   The `REACT_APP_API_HOST` variable contains the host name of the API which is the backend. However, if you set it up on your local machine and you set the host to localhost, the challenge-bot would not be able reach the API it is running in its own container. This is why the default is set to backend and you should add `127.0.0.1 backend` to your `/etc/hosts`.
+   The `REACT_APP_API_URL` variable contains the host name of the API which is the backend. However, if you set it up on your local machine and you set the host to localhost, the challenge-bot would not be able reach the API it is running in its own container. This is why the default is set to backend and you should add `127.0.0.1 backend` to your `/etc/hosts`.
    For a global setup, it should work to add the global domain as variable.
 
 3. **Build and Run the Services**: Use Docker Compose to build and run the services. In the directory containing the `docker-compose.yml` file, run:

@@ -15,7 +15,7 @@ RUN npm install
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
 
-ARG REACT_APP_API_HOST
+ARG REACT_APP_API_URL
 # Build the app
 RUN npm run build
 

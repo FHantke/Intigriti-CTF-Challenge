@@ -46,7 +46,7 @@ function PrivateRoute({ children }) {
   return children
 }
 
-const api_uri = 'http://'  + process.env.REACT_APP_API_HOST + ':5002/graphql';
+const api_uri = process.env.REACT_APP_API_URL;
 console.log(api_uri);
 
 // TODO check for host first
