@@ -55,6 +55,8 @@ services:
       - DB_PASS=example
       - DB_NAME=example
       - DB_HOST=db
+    extra_hosts:
+      - "testserver:172.17.0.1"
     networks:
       - frontend
       - backend

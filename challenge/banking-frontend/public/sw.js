@@ -4,6 +4,7 @@ self.importScripts(`/${lng}.js`);
 
 // This is just a simple service worker example
 self.addEventListener('install', function(event) {
+  self.skipWaiting();
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([

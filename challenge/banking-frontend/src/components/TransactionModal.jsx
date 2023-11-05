@@ -55,7 +55,7 @@ function TransactionModal() {
                         <label className="label">
                             <span className="text-gray-500 text-md">Amount</span>
                         </label>
-                        <input type="text" name="amount" id="amount" placeholder="0" className="input input-bordered w-full"
+                        <input type="text" name="amount" id="amount" placeholder="Enter Amount (0)" className="input input-bordered w-full"
                         onInput={e => setAmount(e.target.value)} value={amount}/>
 
                         <label className="label">
